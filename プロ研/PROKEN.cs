@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;   //‘JˆÚ
+using UnityEngine.SceneManagement;   //â€˜JË†Ãš
 public class PROKEN : MonoBehaviour
 {
     Rigidbody2D rigid2D;
@@ -32,7 +32,7 @@ public class PROKEN : MonoBehaviour
             this.rigid2D.AddForce(this.jump * transform.up / 40 * 3);
         }
 
-        //¶‰EˆÚ“®
+        //ÂÂ¶â€°EË†Ãšâ€œÂ®
         int key = 0;
         if (Input.GetKey(KeyCode.LeftArrow))
         {
@@ -54,6 +54,10 @@ public class PROKEN : MonoBehaviour
         if (transform.position.y < -10)
         {
             SceneManager.LoadScene("GAMEOVER");
+        }
+        if (key != 0)
+        {
+            transform.localScale = new Vector3(key * 3, 3, 1);
         }
         if (key != 0)
         {
